@@ -30,7 +30,7 @@ const reducer: FrameReducer<State> = (state, action) => {
 
 // This is a react server component only
 export default async function Home({ searchParams }: NextServerPageProps) {
-  const url = currentURL("/examples/multi-page");
+  const url = currentURL("/test");
   const previousFrame = getPreviousFrame<State>(searchParams);
   const [state] = useFramesReducer<State>(reducer, initialState, previousFrame);
   const imageUrl = `https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.spreadshirt.com.au%2Fshop%2Fdesign%2Flow%2Bbattery%2Bsticker-D5f58e344f937642510a79d7d%3Fsellable%3DgnBdj9EONRtb7NRAOrOe-1459-215&psig=AOvVaw18I2c-PFdfmMemqCL4kPrm&ust=1710958652066000&source=images&cd=vfe&opi=89978449&ved=0CBIQjRxqFwoTCMiHu-f3gIUDFQAAAAAdAAAAABAE`;
